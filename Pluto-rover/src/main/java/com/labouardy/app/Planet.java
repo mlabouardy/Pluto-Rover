@@ -6,11 +6,15 @@ import java.util.List;
 public class Planet {
 	private Character[][] grid;
 	private int n;
+	private int lastX;
+	private int lastY;
 	private List<Obstacle> obstacles;
 	
 	public Planet(int n){
 		this.n=n;
 		this.grid=new Character[n][n];
+		this.lastX=-1;
+		this.lastY=-1;
 		this.obstacles=new ArrayList<Obstacle>();
 	}
 	
@@ -53,5 +57,16 @@ public class Planet {
 		for(int i=0;i<n;i++){
 			System.out.print("\t "+i+" \t");
 		}
+	}
+
+	public void update(int x, int y, Compass direction) {
+		if(lastX!=-1 && lastY!=-1){
+			grid[lastX][lastY]=' ';
+		}
+		int tmpX=realX(x);
+		int tmpY=realY(y);
+		grid[tmpY][tmpX]=direction.getValue().charAt(0);
+		lastX=tmpY;
+		lastY=tmpX;
 	}
 }

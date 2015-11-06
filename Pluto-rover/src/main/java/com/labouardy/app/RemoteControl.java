@@ -24,6 +24,7 @@ public class RemoteControl {
 		if(command.compareTo(Command.R)==0){
 			rover.right();
 		}
+		planet.update(rover.getX(), rover.getY(), rover.getDirection());
 	}
 	
 	public void printMap(){
