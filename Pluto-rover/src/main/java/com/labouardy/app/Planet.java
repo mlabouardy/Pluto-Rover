@@ -49,9 +49,9 @@ public class Planet {
 			}
 			System.out.println("\n");
 		}
-		System.out.print(" |");
+		System.out.print("  ");
 		for(int i=0;i<n;i++){
-			System.out.print("\t "+i+" \t|");
+			System.out.print("\t "+i+" \t");
 		}
 	}
 }
