@@ -8,4 +8,8 @@ public class Planet {
 		this.n=n;
 		this.grid=new Character[n][n];
 	}
+	
+	public int getSize(){
+		return n;
+	}
 }
