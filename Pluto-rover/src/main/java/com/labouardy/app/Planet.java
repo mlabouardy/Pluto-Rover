@@ -40,4 +40,18 @@ public class Planet {
 	public int realY(int y){
 		return n-1-y;
 	}
+
+	public void print() {
+		for(int i=0;i<n;i++){
+			System.out.print((n-1-i)+" |");
+			for(int j=0;j<n;j++){
+				System.out.print("\t "+(grid[i][j]==null?"":grid[i][j])+"\t|");
+			}
+			System.out.println("\n");
+		}
+		System.out.print(" |");
+		for(int i=0;i<n;i++){
+			System.out.print("\t "+i+" \t|");
+		}
+	}
 }
