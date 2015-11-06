@@ -16,4 +16,8 @@ public class Obstacle {
 	public int getY(){
 		return y;
 	}
+
+	public boolean isTheSame(int x2, int y2) {
+		return x==x2 && y==y2;
+	}
 }

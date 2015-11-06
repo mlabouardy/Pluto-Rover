@@ -21,6 +21,14 @@ public class Planet {
 		grid[y][x]='O';
 	}
 	
+	public boolean hasObstacle(int x, int y){
+		for(Obstacle o:obstacles){
+			if(o.isTheSame(x,y))
+				return true;
+		}
+		return false;
+	}
+	
 	public int getSize(){
 		return n;
 	}
