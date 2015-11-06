@@ -9,6 +9,7 @@ public class RemoteControl {
 	public RemoteControl(Planet planet, Rover rover){
 		this.planet=planet;
 		this.rover=rover;
+		planet.update(rover.getX(), rover.getY(), rover.getDirection());
 	}
 	
 	public void execute(Command command){
