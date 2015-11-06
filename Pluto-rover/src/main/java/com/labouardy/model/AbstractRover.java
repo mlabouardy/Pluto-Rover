@@ -48,5 +48,9 @@ abstract public class AbstractRover implements Rover{
 	public Compass getDirection() {
 		return direction;
 	}
+	
+	public String toString(){
+		return "("+x+","+y+","+direction+")";
+	}
 
 }
